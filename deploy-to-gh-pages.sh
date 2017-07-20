@@ -7,7 +7,7 @@ CURRENT_COMMIT=`git rev-parse HEAD`
 ORIGIN_URL=`git config --get remote.origin.url`
 ORIGIN_URL_WITH_CREDENTIALS=${ORIGIN_URL/\/\/github.com/\/\/$GITHUB_TOKEN@github.com}
 
-cp .gitignore $DIST_DIRECTORY || exit 1
+#cp .gitignore $DIST_DIRECTORY || exit 1
 
 #echo "Checking out gh-pages branch"
 #git pull origin gh-pages
@@ -41,3 +41,5 @@ rm -Rf $DIST_DIRECTORY
 
 echo "Deployed successfully."
 exit 0
+
+#force_rebuild
